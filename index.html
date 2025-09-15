@@ -1,167 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LinkedOut – Your Career Catalyst</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Modern Icons (lucide) -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedOut - Find Your Next Big Opportunity</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">LinkedOut</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
+        <div class="background-blob blob1"></div>
+    <div class="background-blob blob2"></div>
+    <div class="background-blob blob3"></div>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">LinkedOut</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                </ul>
+                <a href="login.html" class="btn btn-primary">Login / Sign Up</a>
+            </nav>
+        </header>
+        <main class="hero">
+            <div class="hero-content">
+                <h1>Find Your Next Big Opportunity.</h1>
+                <p>Revolutionizing the way internships and entry-level jobs are found and filled. Swipe, match, and get hired faster than ever.</p>
+                <a href="login.html" class="btn btn-primary">Get Started Now</a>
+            </div>
+            <div class="hero-visual">
+                <div class="ai-card">
+                    <div class="ai-icon">✨</div>
+                    <h2>AI-Powered Matching</h2>
+                    <p>Our intelligent algorithm connects you with opportunities that truly fit your profile.</p>
+                </div>
+            </div>
+        </main>
     </div>
-    <button class="login-btn">Login</button>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero" id="home">
-    <div class="hero-text" data-aos="fade-right">
-      <h1>Find Your <br> Dream Job Today</h1>
-      <p>Connecting students, graduates and professionals to the right opportunities that shape their future.</p>
-      <button class="btn">Get Started</button>
-    </div>
-    <div class="hero-image" data-aos="fade-left">
-      <!-- simple stacked-card look -->
-      <div class="card-layer"></div>
-      <div class="card-layer mid"></div>
-      <div class="card-layer top"></div>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section class="about" id="about" data-aos="fade-up">
-    <div class="about-container">
-      <img src="https://via.placeholder.com/500x350" alt="About">
-      <div>
-        <h2>About LinkedOut</h2>
-        <p>We bridge the gap between talent and opportunity with a smart job platform for career development.</p>
-        <div class="about-features">
-          <div class="feature-item">
-            <i data-lucide="bullseye"></i>
-            <h3>Mission</h3>
-            <p>Empower growth by connecting talent to the right opportunities.</p>
-          </div>
-          <div class="feature-item">
-            <i data-lucide="eye"></i>
-            <h3>Vision</h3>
-            <p>Become the leading platform for jobs & skill development.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features" id="features">
-    <h2 data-aos="fade-up">Platform Features</h2>
-    <div class="feature-grid">
-      <div class="feature" data-aos="zoom-in">
-        <i data-lucide="briefcase"></i>
-        <h3>Curated Jobs</h3>
-        <p>Find full-time & part-time roles with industry leaders.</p>
-      </div>
-      <div class="feature" data-aos="zoom-in">
-        <i data-lucide="book-open"></i>
-        <h3>Internships</h3>
-        <p>Kickstart your career with real-world experience.</p>
-      </div>
-      <div class="feature" data-aos="zoom-in">
-        <i data-lucide="globe"></i>
-        <h3>Remote Friendly</h3>
-        <p>Discover flexible & remote opportunities worldwide.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How it works Section -->
-  <section class="how">
-    <h2 data-aos="fade-up">How It Works</h2>
-    <div class="how-steps">
-      <div class="step" data-aos="fade-up">
-        <i data-lucide="user-plus"></i>
-        <h4>Create Profile</h4>
-      </div>
-      <div class="step" data-aos="fade-up" data-aos-delay="100">
-        <i data-lucide="search"></i>
-        <h4>Explore Roles</h4>
-      </div>
-      <div class="step" data-aos="fade-up" data-aos-delay="200">
-        <i data-lucide="send"></i>
-        <h4>Apply & Grow</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Categories Section -->
-  <section class="categories" data-aos="fade-up">
-    <h2>Explore Categories</h2>
-    <div class="category-grid">
-      <div class="category-card"><h4>Engineering</h4></div>
-      <div class="category-card"><h4>Marketing</h4></div>
-      <div class="category-card"><h4>Design</h4></div>
-      <div class="category-card"><h4>Finance</h4></div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2 data-aos="fade-up">Success Stories</h2>
-    <div class="testimonial-container">
-      <div class="testimonial" data-aos="fade-right">
-        <p>“LinkedOut helped me land my dream internship within a month!”</p>
-        <h4>– Priya S.</h4>
-      </div>
-      <div class="testimonial" data-aos="fade-left">
-        <p>“Amazing platform for freshers – highly recommended.”</p>
-        <h4>– Akash M.</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="footer-container">
-      <div>
-        <h3>LinkedOut</h3>
-        <p>Your gateway to jobs, internships, and growth.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact</h4>
-        <p>Email: linkedout@jobconnect.com</p>
-        <p>Phone: +91 98765 43210</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2025 LinkedOut. All rights reserved.
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
-  <script>lucide.createIcons(); AOS.init();</script>
 </body>
 </html>

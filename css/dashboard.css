@@ -1,0 +1,45 @@
+body { overflow: auto; } /* Allow scrolling on dashboards */
+.dashboard-container { display: flex; min-height: 100vh; }
+.sidebar { width: 250px; background-color: var(--primary-panel-bg); padding: 1.5rem; display: flex; flex-direction: column; flex-shrink: 0; }
+.sidebar .logo { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 2.5rem; }
+.sidebar-nav ul { list-style: none; padding: 0; }
+.sidebar-nav a { display: flex; align-items: center; gap: 1rem; padding: 1rem; text-decoration: none; color: var(--secondary-text); border-radius: 8px; }
+.sidebar-nav a:hover, .sidebar-nav li.active a { color: var(--primary-text); background-color: rgba(0,0,0,0.2); }
+.user-profile { margin-top: auto; display: flex; align-items: center; gap: 1rem; }
+.user-avatar { width: 40px; height: 40px; border-radius: 50%; }
+.user-name { font-weight: 600; }
+.logout-link { font-size: 0.9rem; color: var(--secondary-text); }
+.main-content { flex-grow: 1; padding: 2rem; }
+
+/* --- DASHBOARD CARDS & FILTERS --- */
+.dashboard-header { background: var(--glass-bg); backdrop-filter: blur(5px); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1rem; margin-bottom: 2rem; }
+.filters { display: flex; gap: 1rem; }
+.filter-item { flex-grow: 1; display: flex; align-items: center; gap: 0.5rem; background-color: rgba(0,0,0,0.2); padding: 0.5rem 1rem; border-radius: 8px; }
+.filter-item input, .filter-item select { background: none; border: none; color: var(--primary-text); width: 100%; }
+.filter-item input:focus, .filter-item select:focus { outline: none; }
+.btn-filter { background-color: var(--accent-color); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.swipe-area, .company-view { display: flex; flex-direction: column; align-items: center; }
+.job-card, .candidate-profile-card { background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; width: 100%; max-width: 500px; }
+.candidate-profile-card { max-width: 900px; }
+.job-card-header, .candidate-summary { display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); }
+.company-logo { width: 60px; height: 60px; border-radius: 10px; background: white; }
+.candidate-photo { width: 120px; height: 120px; border-radius: 12px; object-fit: cover; }
+.swipe-actions, .candidate-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+.btn-reject, .btn-accept, .btn-pass, .btn-express-interest { padding: 1rem; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 1.5rem; cursor: pointer; }
+.btn-reject { background: rgba(255,50,50,0.1); color: #ff4d4d; }
+.btn-accept { background: rgba(50,255,50,0.1); color: #4caf50; }
+.btn-pass { background: var(--secondary-panel-bg); color: var(--secondary-text); border-radius: 8px; width: auto; height: auto; padding: 0.8rem 1.8rem; font-size: 1rem; }
+.btn-express-interest { background: var(--accent-color); color: white; border-radius: 8px; width: auto; height: auto; padding: 0.8rem 1.8rem; font-size: 1rem; }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .dashboard-container { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; box-sizing: border-box; flex-direction: row; justify-content: space-between; }
+    .sidebar .logo { margin-bottom: 0; }
+    .sidebar-nav, .user-profile { display: none; } /* Simple hide for mobile, a menu button would be needed for full function */
+    .main-content { padding: 1rem; }
+    .filters { flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 768px) {
+    .job-card-header, .candidate-summary { flex-direction: column; text-align: center; }
+}

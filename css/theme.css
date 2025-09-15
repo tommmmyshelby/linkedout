@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- THEME & COLOR VARIABLES --- */
+:root {
+    --bg-gradient: radial-gradient(circle at 10% 20%, rgb(20, 30, 48) 0%, rgb(36, 59, 85) 100.2%);
+    --primary-purple: #7C3AED;
+    --primary-purple-hover: #6D28D9;
+    --card-bg: #1E293B; /* 282A44 */
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: var(--font-family);
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- BLURRED BACKGROUND BLOBS --- */
+.background-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+.blob1 {
+    width: 450px;
+    height: 450px;
+    background: var(--primary-purple);
+    top: -150px;
+    left: -150px;
+}
+.blob2 {
+    width: 500px;
+    height: 500px;
+    background: #00D1FF;
+    bottom: -200px;
+    right: -200px;
+}
+.blob3 {
+    width: 400px;
+    height: 400px;
+    background: #e81cff;
+    bottom: 50px;
+    left: 20%;
+}

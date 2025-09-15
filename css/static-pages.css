@@ -1,0 +1,58 @@
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    padding: 1.5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+}
+.logo { font-size: 1.25rem; font-weight: 700; }
+.logo a { text-decoration: none; color: var(--primary-text); }
+nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; }
+nav ul li a { text-decoration: none; color: var(--secondary-text); font-weight: 500; transition: color 0.3s; }
+nav ul li a:hover, nav ul li a.active { color: var(--primary-text); }
+.login-btn { text-decoration: none; background-color: var(--accent-color); color: white; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 600; transition: background-color 0.3s; }
+.login-btn:hover { background-color: var(--accent-hover); }
+
+/* --- HERO SECTION --- */
+.hero { display: flex; align-items: center; gap: 3rem; padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+.hero-content { flex: 1; }
+.hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin: 0 0 1.5rem 0; }
+.hero-content p { font-size: 1.1rem; color: var(--secondary-text); line-height: 1.6; margin-bottom: 2.5rem; }
+.hero-buttons .btn { text-decoration: none; padding: 0.9rem 1.8rem; border-radius: 8px; font-weight: 600; }
+.btn-primary { background-color: var(--accent-color); color: white; }
+.hero-image-container { flex: 1; display: flex; justify-content: center; align-items: center; }
+.ai-powered-card { background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; text-align: center; }
+.ai-icon { font-size: 2.5rem; color: var(--accent-secondary); margin-bottom: 1rem; }
+.ai-powered-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.ai-powered-card p { color: var(--secondary-text); }
+
+/* --- ABOUT & FEATURES PAGES --- */
+.page-hero { text-align: center; padding: 4rem 2rem; }
+.page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.page-hero p { font-size: 1.1rem; color: var(--secondary-text); max-width: 600px; margin: 0 auto; }
+.content-section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.feature-card { background: var(--glass-bg); backdrop-filter: blur(5px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; text-align: center; }
+.feature-icon { font-size: 2.5rem; color: var(--accent-secondary); margin-bottom: 1.5rem; }
+.feature-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.feature-card p { font-size: 1rem; line-height: 1.6; color: var(--secondary-text); }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .hero { flex-direction: column; text-align: center; }
+    nav ul { display: none; } /* Simple hide for mobile */
+}
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .page-hero h1 { font-size: 2.2rem; }
+    nav { padding: 1rem; }
+}

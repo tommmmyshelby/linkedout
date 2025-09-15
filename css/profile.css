@@ -1,0 +1,47 @@
+/* --- SHARED HEADER --- */
+.page-header-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: var(--primary-panel-bg); border-bottom: 1px solid var(--glass-border); }
+.logo { font-size: 1.5rem; font-weight: 700; color: white; }
+.main-nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; }
+.main-nav a { text-decoration: none; color: var(--secondary-text); font-weight: 500; }
+.main-nav a:hover { color: var(--primary-text); }
+.user-profile-icon img, .user-profile-info img { width: 40px; height: 40px; border-radius: 50%; }
+
+/* --- PROFILE CREATION & FORMS --- */
+.centered-container { padding: 4rem 1rem; }
+.profile-creation-box { width: 100%; max-width: 900px; margin: 0 auto; text-align: center; }
+.profile-header h1 { font-size: 2.5rem; }
+.profile-header p { color: var(--secondary-text); font-size: 1.1rem; }
+.form-card { background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2.5rem; text-align: left; margin-top: 2rem; }
+.form-card h2 { margin-top: 0; font-size: 1.5rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.form-group { display: flex; flex-direction: column; }
+.form-group.full-width { grid-column: 1 / -1; }
+.form-group label { margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem; color: var(--secondary-text); }
+.form-group input, .form-group textarea, .form-group select { padding: 0.8rem 1rem; background-color: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); color: var(--primary-text); border-radius: 8px; font-size: 1rem; font-family: inherit; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 2px rgba(106, 72, 215, 0.4); }
+.form-actions { display: flex; justify-content: space-between; margin-top: 2rem; border-top: 1px solid var(--glass-border); padding-top: 2rem; }
+.btn-primary, .btn-secondary { padding: 0.8rem 1.8rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.btn-primary { background-color: var(--accent-color); color: white; }
+.btn-secondary { background-color: var(--secondary-panel-bg); color: var(--primary-text); }
+
+/* --- CONFIRMATION & SCHEDULING PAGES --- */
+.confirmation-box { text-align: center; }
+.summary-item { display: flex; justify-content: space-between; padding: 1rem; border-bottom: 1px solid var(--glass-border); }
+.scheduling-container { display: flex; max-width: 1200px; margin: 2rem auto; border-radius: 16px; overflow: hidden; background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); }
+.interview-details-panel { background: rgba(0,0,0,0.1); padding: 2rem; width: 350px; }
+.scheduler-panel { flex-grow: 1; padding: 2rem; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; text-align: center; }
+.time-slot { background-color: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); color: var(--primary-text); padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; }
+.time-slot.selected { background-color: var(--accent-color); border-color: var(--accent-color); }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .main-nav { display: none; } /* Simple hide */
+    .scheduling-container { flex-direction: column; }
+    .interview-details-panel { width: auto; border-right: none; border-bottom: 1px solid var(--glass-border); }
+}
+@media (max-width: 768px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .profile-header h1 { font-size: 2rem; }
+    .form-card { padding: 1.5rem; }
+}
